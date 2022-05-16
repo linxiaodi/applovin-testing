@@ -1,38 +1,272 @@
-.App {
-  text-align: center;
+html, body, #root {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Alegreya Sans';
+  color: #332821;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+
+.home {
+  height: 100vh;
+  background: linear-gradient(180deg, #E75481 -22.84%, #929CDE 113.36%);
+  padding-top: 36vh;
+}
+
+.home-card {
+  width: 230px;
+  height: 247px;
+  margin: 0 auto;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  background: #FBFBFB;
+  box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+.home-card-title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 0px;
+}
+
+.home-card-button {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+
+  position: absolute;
+  width: 163px;
+  height: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+
+  color: #fff;
+  background: #5E4FC1;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.home-card-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-card-img {
+  width: 120px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -60px;
+}
+
+.home-card-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 17px 0;
+}
+
+.temperature {
+
+}
+
+.temperature-num {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+}
+
+.temperature-unit {
+  vertical-align: top;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.temperature-date {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(51, 40, 33, 0.5);
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.tags-wind {
+  width: 72px;
+  background: rgba(212, 66, 111, 0.5);
+  padding: 0 2px;
+  border-radius: 20px;
+}
+
+.tags-text {
+  margin-top: 4px;
+  min-width: 50px;
+  background: rgba(106, 117, 186, 0.5);;
+  padding: 0 2px;
+  border-radius: 20px;
+}
+
+
+.humidity {
+  margin-top: 50px;
+  color: #fff;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.humidity-item {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.humidity-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.humidity-item div {
+  display: flex;
+  align-items: center;
+}
+
+.detail-humidity {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 12px;
+
+}
+
+.detail-humidity .humidity-item {
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+}
+
+.detail-humidity .humidity-item img {
+  margin-right: 4px;
+}
+
+.detail {
+  padding-top: 130px;
+  color: #332821;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.detail-title {
+  font-weight: 700;
+  font-size: 30px;
+  padding: 0 20px;
+}
+
+.detail-temperature {
+  padding: 0 20px;
+  vertical-align: top;
+  font-weight: 700;
+}
+
+.detail-temperature span:first-child {
+  font-size: 96px;
+}
+
+.detail-temperature span:nth-child(2) {
+  line-height: 4;
+  vertical-align: top;
+}
+
+
+.detail-weather {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 100px;
+}
+
+.detail-router-back {
+  width: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.chart-box-title {
+  padding: 20px 20px 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.forecast-daily {
+  margin-top: 20px;
+}
+
+.forecast-daily-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+
+.forecast-daily-item img {
+  width: 40px;
+}
+
+.forecast-daily-item .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.forecast-daily-item .temperature span:first-child{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 10px;
+}
+
+.forecast-daily-item .temperature span:last-child:not(.unit) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(51, 40, 33, 0.5);
+}
+
+.forecast-daily-item .unit {
+  vertical-align: top;
+  font-size: 12px !important;
+  display: inline-block;
+  transform: scale(0.8);
+  color: inherit;
 }
