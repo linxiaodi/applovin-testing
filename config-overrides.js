@@ -1,4 +1,4 @@
 module.exports = function override(config, env) {
-  config.output.publicPath = '.'
+  config.output.publicPath = './'
   return config;
 }
