@@ -2,6 +2,7 @@
   "name": "weather-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://linxiaodi.github.io/applovin-testing/",
   "dependencies": {
     "@antv/g2": "^4.2.1",
     "@testing-library/jest-dom": "^5.14.1",
